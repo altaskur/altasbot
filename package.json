@@ -1,0 +1,33 @@
+{
+  "name": "altasbot",
+  "version": "0.1.0",
+  "description": "Un bot pensado para practicar backend, consumiendo APIs, echo en programación orientada a objetos",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altaskur/altasbot.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Altaskur",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/altaskur/altasbot/issues"
+  },
+  "homepage": "https://github.com/altaskur/altasbot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "i": "^0.3.7",
+    "npm": "^8.19.1",
+    "tmi.js": "^1.8.5"
+  }
+}
