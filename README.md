@@ -8,13 +8,16 @@ El proyecto esta enfocado para consumir la API de Twitch, de esta manera obtener
 Puntos a tener en cuenta:
 
 1. Directo
-    - Título del directo, categoría, y fecha del inicio.
-    - Fecha de finalización del directo.
+    - Obtener el título del directo, categoría, y fecha del inicio.
+    - Obtener la fecha de finalización del directo.
+    - Establecer y desactivar modo emoticonos
+    - Establecer y desactivar modo sólo seguidores
 
 2. Chat
     - Tiene que recabar información de los mensajes, como el usuario que ha escrito y su contenido.
     - Apuntar en una lista el número de participantes únicos del chat.
     - El número de mensajes que un mismo usuario ha mandado y su contenido.
+    - Eliminar mensajes en base a una lista de palabras prohibidas
 
 3. Comandos
     - Serán de dos tipos:
