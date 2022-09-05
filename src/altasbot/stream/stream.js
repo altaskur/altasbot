@@ -6,16 +6,6 @@ class Stream {
     this.client = client;
   }
 
-  getStatus() {
-    this.client.on("join", (channel, username, self) => {
-      console.log("Bienvenida/o al directo ", username);
-      this.client.say(
-        process.env.CHANNEL_NAME,
-        `/me MrDestructoid Bienvenida/o al directo @${username}`
-      );
-    });
-  }
-
   moderator() {
     this.client.on("chat", (target, ctx, message, self) => {
       if (self) {

@@ -4,14 +4,22 @@ class Events {
   }
 
   getEvents() {
-    this.client.on("join", (channel, username, self) => {
-      if (self || process.env.CHANNEL_NAME) return;
+    //todo: Control for raid events
 
-      this.client.action(
-        process.env.CHANNEL_NAME,
-        "/me MrDestructoid Bienvenida/o al canal ",
-        username
-      );
+    this.client.on("join", (channel, username, self) => {
+      //todo: Control for bots joining the channel
+
+      if (self || username == process.env.CHANNEL_NAME) return;
+
+      let bots = ["streamlabs", "streamelements", "nightbot", "soundalerts"];
+      if (bots.includes(username)) return;
+
+      console.log(`${username} joined the channel`);
+
+      // this.client.action(
+      //   process.env.CHANNEL_NAME,
+      //   ` MrDestructoid @${username} Bienvenida/o al canal`
+      // );
     });
 
     this.client.on("raided", (channel, username, viewers) => {

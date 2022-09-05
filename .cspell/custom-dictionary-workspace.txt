@@ -15,9 +15,14 @@ followersonlyoff
 gintonic
 gintonics
 hosteado
+middlewares
+nightbot
 resub
 Roadmap
 roomstate
 slowoff
+soundalerts
+streamelements
+streamlabs
 subscribersoff
 userstate

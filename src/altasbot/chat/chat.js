@@ -1,11 +1,10 @@
 class Chat {
   constructor(client) {
     this.client = client;
-    this.viewers = {};
+    this.viewers = [];
   }
 
   onMessage() {
-    console.log(reports + " reports");
     this.client.on("message", (channel, userstate, message, self) => {
       if (self) return;
       const username = userstate.username;
@@ -34,6 +33,7 @@ class Chat {
 
   onFinish() {
     console.log(this.viewers);
+    1;
   }
 }
 

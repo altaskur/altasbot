@@ -4,11 +4,12 @@ require("dotenv").config();
 const { Commands } = require("./commands/commands");
 const { Stream } = require("./stream/stream");
 const { Chat } = require("./chat/chat");
+const { Events } = require("./events/events");
 
 class Connector {
   constructor() {
     this.client = new tmi.Client({
-      options: { debug: true },
+      options: { debug: false },
       identity: {
         username: process.env.BOT_USERNAME,
         password: process.env.TWITCH_OAUTH_TOKEN,
@@ -19,6 +20,7 @@ class Connector {
     this.commands = new Commands(this.client);
     this.stream = new Stream(this.client);
     this.chat = new Chat(this.client);
+    this.events = new Events(this.client);
   }
 
   connect() {
@@ -28,9 +30,10 @@ class Connector {
   listen() {
     this.commands.getCommands();
     this.commands.addCommands();
-    this.stream.getStatus();
+
     this.stream.moderator();
     this.chat.onMessage();
+    this.events.getEvents();
   }
 }
 

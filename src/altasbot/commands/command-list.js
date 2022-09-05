@@ -1,4 +1,5 @@
 var reports = 0;
+const { io } = require("../../socketServer/main.js");
 
 function commanList(commands) {
   commands.addCommands("!hola", (client, target, ctx, message, self) => {
@@ -8,7 +9,6 @@ function commanList(commands) {
   commands.addCommands("!discord", (client, target, ctx, message, self) => {
     client.say(target, `/me Discord: https://discord.gg/4aNWsdCfpd`);
   });
-
   commands.addCommands("!github", (client, target, ctx, message, self) => {
     client.say(target, `/me GitHub: https://github.com/altaskur/altaskur`);
   });
