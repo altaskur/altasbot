@@ -1,4 +1,23 @@
 # Custom Dictionary Words
 altasbot
 Altasbot
+altaskur
+autohost
+baneado
+bypepe
+comman
+desafio
+Destructoid
+emoteonly
+emoteonlyoff
+followersonly
+followersonlyoff
+gintonic
+gintonics
+hosteado
+resub
 Roadmap
+roomstate
+slowoff
+subscribersoff
+userstate
