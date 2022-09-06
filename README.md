@@ -4,6 +4,12 @@ Un bot para Twitch, pensado para trabajar un backend junto a programación orien
 
 ## Estructura
 
+index.js -> Este es el punto de partida que llama a todas las partes del bot
+
+### src
+
+dentro de src tenemos las partes que forman parte del bot
+
 * Altasbot -> Aquí se encuentra la librería TMI-js encargada de llamar a la api de Twitch.
 * socketServer -> Aquí se encuentra un servidor de express que alberga socket-io.
 * Client -> Un cliente de pruebas para socketServer.
