@@ -4,7 +4,12 @@ class Events {
   }
 
   getEvents() {
-    //todo: Control for raid events
+    const socketInit = require("../../socketServer/socketInit.js");
+
+    function sendSocket(data) {
+      const connection = socketInit.getConnection();
+      connection.sendEvent("message", data);
+    }
 
     this.client.on("join", (channel, username, self) => {
       //todo: Control for bots joining the channel
@@ -28,6 +33,9 @@ class Events {
         process.env.CHANNEL_NAME,
         `/me MrDestructoid Raid de ${viewers} personas por parte de ${username}`
       );
+      sendSocket({
+        data: `Raid de ${viewers} personas por parte de ${username}`,
+      });
     });
 
     this.client.on(

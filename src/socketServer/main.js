@@ -18,6 +18,16 @@ class ServerExpress {
 
   middlewares() {
     this.app.use(cors({ origin: true }));
+    this.app.use(express.json());
+    this.app.use(express.static("public"));
+  }
+
+  routes() {
+    //Refactor this routes to a new file
+    this.app.get("/audio/:audioName", (req, res) => {
+      const { audioName } = req.params;
+      res.sendFile(__dirname + `/public/audio/${audioName}`);
+    });
   }
 
   start() {
@@ -26,6 +36,8 @@ class ServerExpress {
     SocketInit.connect(this.server);
 
     connectorInstance.listen();
+
+    this.routes();
 
     this.server.listen(this.port, () => {
       console.log("Example app listening on port", this.port);

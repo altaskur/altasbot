@@ -1,6 +1,11 @@
 require("dotenv").config();
 const socketInit = require("../../socketServer/socketInit.js");
 
+function sendSocket(data) {
+  const connection = socketInit.getConnection();
+  connection.sendEvent("message", data);
+}
+
 class Stream {
   constructor(client) {
     console.log("client loaded", client);
