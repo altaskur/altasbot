@@ -45,4 +45,4 @@ class SocketsServer {
   }
 }
 
-module.exports = { SocketsServer, io };
+module.exports = { SocketsServer };

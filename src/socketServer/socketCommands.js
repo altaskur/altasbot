@@ -1,7 +1,5 @@
 class SocketCommands {
-  constructor( io ) {
+  constructor(io) {
     this.io = io;
   }
-
-  se
 }
