@@ -1,5 +1,7 @@
 # Altasbot
 
+## ⌛ En desarollo, para ver el estado del proyecto visita la rama [dev](https://github.com/altaskur/altasbot/tree/dev)
+
 Un bot para Twitch, pensado para trabajar un backend junto a programación orientada a objetos.
 
 ## Roadmap
