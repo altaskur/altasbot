@@ -1,9 +1,11 @@
 var reports = 0;
-const { io } = require("../../socketServer/main.js");
+const socketInit = require("../../socketServer/socketInit.js");
 
 function commanList(commands) {
   commands.addCommands("!hola", (client, target, ctx, message, self) => {
     client.say(target, `/me MrDestructoid Hola ${ctx.username}!`);
+    const connection = socketInit.getConnection();
+    connection.sendEvent("message", { msg: "Hola " + ctx.username });
   });
 
   commands.addCommands("!discord", (client, target, ctx, message, self) => {

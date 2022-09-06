@@ -1,4 +1,5 @@
 require("dotenv").config();
+const socketInit = require("../../socketServer/socketInit.js");
 
 class Stream {
   constructor(client) {
@@ -18,6 +19,8 @@ class Stream {
         if (commandName.startsWith("!")) {
           switch (commandName) {
             case "!emoteOn":
+              const connection = socketInit.getConnection();
+              connection.sendEvent("message", { msg: "test " });
               this.client.emoteonly(process.env.CHANNEL_NAME).catch((err) => {
                 console.error(err);
               });
