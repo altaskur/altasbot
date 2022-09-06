@@ -25,4 +25,5 @@ soundalerts
 streamelements
 streamlabs
 subscribersoff
+truetype
 userstate
