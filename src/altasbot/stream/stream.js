@@ -37,14 +37,14 @@ class Stream {
                   console.error(err);
                 });
               break;
-            case "!followersOn":
+            case "!seguidoresOn":
               this.client
                 .followersonly(process.env.CHANNEL_NAME, 5)
                 .catch((err) => {
                   console.error(err);
                 });
               break;
-            case "!followersOff":
+            case "!seguidoresOff":
               this.client
                 .followersonlyoff(process.env.CHANNEL_NAME)
                 .catch((err) => {
