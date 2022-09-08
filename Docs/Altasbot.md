@@ -1,4 +1,4 @@
-# Roadmap
+# Altasbot
 
 El proyecto esta enfocado para consumir la API de Twitch, de esta manera obtener datos del canal a escuchar.
 Puntos a tener en cuenta:
@@ -78,9 +78,10 @@ Puntos a tener en cuenta:
             * Host
             * Bits
             * Subs
-            * Follows
             * Bans
             * Timeout
+            * Ritual
+            * Vip
 
 5. Otros bots
     * El bot se encargará de obtener información de otros bots a las cuales el no tiene potestad de acceso.

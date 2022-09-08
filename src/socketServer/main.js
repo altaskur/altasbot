@@ -6,13 +6,13 @@ const SocketInit = require("./socketInit");
 
 const { connectorInstance } = require("../altasbot/connector");
 const { commanList } = require("../altasbot/commands/command-list");
+const { streamCommandsList } = require("../altasbot/stream/streamCommandsList");
 
 class ServerExpress {
   constructor() {
     this.app = express();
     this.server = http.createServer(this.app);
     connectorInstance.connect();
-    commanList(connectorInstance.commands);
     this.port = 3000;
   }
 
@@ -30,12 +30,19 @@ class ServerExpress {
     });
   }
 
+  startCommands() {
+    commanList(connectorInstance.commands);
+    streamCommandsList(connectorInstance.stream);
+  }
+
   start() {
     this.middlewares();
 
     SocketInit.connect(this.server);
 
     connectorInstance.listen();
+
+    this.startCommands();
 
     this.routes();
 

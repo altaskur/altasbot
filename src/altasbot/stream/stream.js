@@ -1,105 +1,31 @@
-require("dotenv").config();
-const socketInit = require("../../socketServer/socketInit.js");
-
-function sendSocket(data) {
-  const connection = socketInit.getConnection();
-  connection.sendEvent("message", data);
-}
-
 class Stream {
   constructor(client) {
-    console.log("client loaded", client);
     this.client = client;
+    this.dict = {};
   }
 
-  moderator() {
+  getCommands() {
     this.client.on("chat", (target, ctx, message, self) => {
-      if (self) {
-        return;
-      }
-
+      if (self) return;
       if (ctx.mod || ctx.username == process.env.CHANNEL_NAME) {
-        // Ponemos los comandos de moderación
-        const commandName = message;
-        if (commandName.startsWith("!")) {
-          switch (commandName) {
-            case "!emoteOn":
-              const connection = socketInit.getConnection();
-              connection.sendEvent("message", { msg: "test " });
-              this.client.emoteonly(process.env.CHANNEL_NAME).catch((err) => {
-                console.error(err);
-              });
-              break;
-            case "!emoteOff":
-              this.client
-                .emoteonlyoff(process.env.CHANNEL_NAME)
-                .catch((err) => {
-                  console.error(err);
-                });
-              break;
-            case "!seguidoresOn":
-              this.client
-                .followersonly(process.env.CHANNEL_NAME, 5)
-                .catch((err) => {
-                  console.error(err);
-                });
-              break;
-            case "!seguidoresOff":
-              this.client
-                .followersonlyoff(process.env.CHANNEL_NAME)
-                .catch((err) => {
-                  console.error(err);
-                });
-              break;
-            case "!slowOn":
-              this.client.slow(process.env.CHANNEL_NAME, 5).catch((err) => {
-                console.error(err);
-              });
-              break;
-            case "!slowOff":
-              this.client.slowoff(process.env.CHANNEL_NAME).catch((err) => {
-                console.error(err);
-              });
-              break;
-            case "!subsOn":
-              this.client.subscribers(process.env.CHANNEL_NAME).catch((err) => {
-                console.error(err);
-              });
-              break;
-            case "!subsOff":
-              this.client
-                .subscribersoff(process.env.CHANNEL_NAME)
-                .catch((err) => {
-                  console.error(err);
-                });
-              break;
-            default:
-              break;
-          }
-          if (commandName.startsWith("!timeout")) {
-            const options = commandName.trim().split(" ");
-            console.log("options", options);
-            if (options.length == 3) {
-              this.client
-                .timeout(
-                  process.env.CHANNEL_NAME,
-                  options[1],
-                  options[2],
-                  option[3]
-                )
-                .catch((err) => {
-                  console.log("Error en el comando!");
-                });
-            } else {
-              this.client.say(
-                process.env.CHANNEL_NAME,
-                ` ${ctx.username} no has puesto el tiempo`
-              );
-            }
-          }
+        const commandName = message.toLowerCase();
+
+        console.log("Hey llego a escuchar el chat");
+
+        console.log("Este es el comando: " + commandName);
+
+        console.log("Este es el diccionario: ", this.dict);
+
+        if (commandName.startsWith("!") && this.dict[commandName]) {
+          this.dict[commandName](this.client, target, ctx, message, self);
+          console.log(`* Executed ${commandName} command`);
         }
       }
     });
+  }
+
+  addCommands(name, func) {
+    this.dict[name] = func;
   }
 }
 

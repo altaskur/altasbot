@@ -31,7 +31,9 @@ class Connector {
     this.commands.getCommands();
     this.commands.addCommands();
 
-    this.stream.moderator();
+    this.stream.getCommands();
+    this.stream.addCommands();
+
     this.chat.onMessage();
     this.events.getEvents();
   }
