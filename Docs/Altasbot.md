@@ -83,6 +83,5 @@ Puntos a tener en cuenta:
             * Ritual
             * Vip
 
-5. Otros bots
-    * El bot se encargará de obtener información de otros bots a las cuales el no tiene potestad de acceso.
-        * Donaciones
+Aquellos comandos y eventos que tengan que ir a la animación del front pasaran primero
+por el controlador de eventos.
