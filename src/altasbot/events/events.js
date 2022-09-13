@@ -20,18 +20,13 @@ class Events {
       if (bots.includes(username)) return;
 
       console.log(`${username} joined the channel`);
-
-      // this.client.action(
-      //   process.env.CHANNEL_NAME,
-      //   ` MrDestructoid @${username} Bienvenida/o al canal`
-      // );
     });
 
     this.client.on("raided", (channel, username, viewers) => {
       console.log("Raid de ", viewers, " personas por parte de ", username);
       this.client.action(
         process.env.CHANNEL_NAME,
-        `/me MrDestructoid Raid de ${viewers} personas por parte de ${username}`
+        `MrDestructoid Raid de ${viewers} personas por parte de ${username}`
       );
       sendSocket({
         data: `Raid de ${viewers} personas por parte de ${username}`,
@@ -44,7 +39,7 @@ class Events {
         console.log("Nuevo suscriptor ", username);
         this.client.action(
           process.env.CHANNEL_NAME,
-          `/me MrDestructoid Nuevo suscriptor ${username}`
+          `MrDestructoid Nuevo suscriptor ${username}`
         );
       }
     );
@@ -55,7 +50,7 @@ class Events {
         console.log("Nuevo suscriptor ", username);
         this.client.action(
           process.env.CHANNEL_NAME,
-          `/me MrDestructoid Nuevo suscriptor ${username}`
+          `MrDestructoid Nuevo suscriptor ${username}`
         );
       }
     );
@@ -64,7 +59,7 @@ class Events {
       console.log(userstate + "nos ha mandado " + userstate.bits + " bits");
       this.client.action(
         process.env.CHANNEL_NAME,
-        `/me MrDestructoid ${userstate.username} nos ha mandado ${userstate.bits} bits`
+        `MrDestructoid ${userstate.username} nos ha mandado ${userstate.bits} bits`
       );
     });
 
@@ -74,7 +69,7 @@ class Events {
       );
       this.client.action(
         process.env.CHANNEL_NAME,
-        `/me MrDestructoid ${username} ha hosteado el canal con ${viewers} viewers`
+        `MrDestructoid ${username} ha hosteado el canal con ${viewers} viewers`
       );
     });
 
@@ -84,7 +79,7 @@ class Events {
       );
       this.client.action(
         process.env.CHANNEL_NAME,
-        `/me MrDestructoid ${username} ha hablado por primera vez en el canal bienvenida/o`
+        `MrDestructoid ${username} ha hablado por primera vez en el canal bienvenida/o`
       );
     });
 
@@ -92,7 +87,7 @@ class Events {
       console.log(username + " ha sido baneado del canal por " + reason);
       this.client.action(
         process.env.CHANNEL_NAME,
-        `/me MrDestructoid ${username} ha sido baneado del canal por ${reason}`
+        `MrDestructoid ${username} ha sido baneado del canal por ${reason}`
       );
     });
 
@@ -102,7 +97,7 @@ class Events {
       );
       this.client.action(
         process.env.CHANNEL_NAME,
-        `/me MrDestructoid ${username} ha sido baneado temporalmente del canal por ${reason}`
+        `MrDestructoid ${username} ha sido baneado temporalmente del canal por ${reason}`
       );
     });
   }

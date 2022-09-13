@@ -10,12 +10,6 @@ class Stream {
       if (ctx.mod || ctx.username == process.env.CHANNEL_NAME) {
         const commandName = message.toLowerCase();
 
-        console.log("Hey llego a escuchar el chat");
-
-        console.log("Este es el comando: " + commandName);
-
-        console.log("Este es el diccionario: ", this.dict);
-
         if (commandName.startsWith("!") && this.dict[commandName]) {
           this.dict[commandName](this.client, target, ctx, message, self);
           console.log(`* Executed ${commandName} command`);
