@@ -1,5 +1,10 @@
 # Altasbot
 
+[<img src="https://img.shields.io/github/last-commit/altaskur/altasbot?style=for-the-badge"></img>](https://github.com/altaskur/altasbot/commits/main) 
+[<img src="https://img.shields.io/github/license/altaskur/altasbot?style=for-the-badge">](https://github.com/altaskur/altasbot/blob/main/LICENSE) 
+[<img src="https://img.shields.io/github/languages/top/altaskur/altasbot?style=for-the-badge">](https://github.com/altaskur/altasbot) 
+[<img src="https://img.shields.io/github/v/tag/altaskur/altasbot?label=Release&style=for-the-badge">](https://github.com/altaskur/altasbot/releases) 
+
 ## ⌛ En desarollo, para ver el estado del proyecto visita la rama [dev](https://github.com/altaskur/altasbot/tree/dev)
 
 Un bot para Twitch, pensado para trabajar un backend junto a programación orientada a objetos.
