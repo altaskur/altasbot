@@ -69,3 +69,17 @@ Puntos a tener en cuenta:
 5. Otros bots
     - El bot se encargará de obtener información de otros bots a las cuales el no tiene potestad de acceso.
         -Donaciones
+        
+        
+## 💙 Agradecimientos
+Seguidores que han ayudado activamente al proyecto:
+
+
+[@bypepe77](https://github.com/bypepe77)
+
+
+## 📧 Redes y apoyo
+
+[<img src="https://img.shields.io/github/followers/altaskur?label=GitHub&color=inactive&logo=Github&style=flat-square"></img>](https://github.com/altaskur)
+[<img src="https://img.shields.io/twitter/follow/altaskur?label=Twitter&logo=Twitter&style=flat-square"></img>](https://twitter.com/Altaskur)
+[<img src="https://img.shields.io/twitch/status/altaksur?label=Twitch - stream &logo=twitch&style=flat-square"></img>](https://www.twitch.tv/altaskur)
