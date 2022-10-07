@@ -9,6 +9,10 @@ function sendSocket(data) {
 function commanList(commands) {
   commands.addCommands("!hola", (client, target, ctx, message, self) => {
     client.say(target, `/me MrDestructoid Hola ${ctx.username}!`);
+    sendSocket({
+      data: `Hola ${ctx.username}!`,
+      audio: "alert.wav",
+    });
   });
 
   commands.addCommands("!adios", (client, target, ctx, message, self) => {
@@ -73,11 +77,32 @@ function commanList(commands) {
     }
     sendSocket(socketText);
   });
+  commands.addCommands("!404", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me ${ctx.username} ha detectado un error de @altaskur en el código`
+    );
+    sendSocket({
+      data: `@altaskur la ha liado parda`,
+      audio: "alert.wav",
+    });
+  });
 
+  commands.addCommands("!problemas", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me ${ctx.username} ha encontrado un error 500 en el directo! `
+    );
+    sendSocket({
+      data: `${ctx.username} ha encontrado un error en el directo!`,
+      audio: "alert.wav",
+    });
+  });
   commands.addCommands("!bot", (client, target, ctx, message, self) => {
     client.say(
       target,
-      `/me Soy un bot creado por @altaskur, puedes ver mi código en github: https://github.com/altaskur/altasbot`
+      `/me Soy un bot creado por  @altaskur y @bypepe77, puedes ver mi código en github: 
+      https://github.com/altaskur/altasbot`
     );
     sendSocket({
       data: `🤖 Soy un bot creado por @altaskur y @bypepe77`,
@@ -90,12 +115,88 @@ function commanList(commands) {
       target,
       `/me El tema de vscode es Enfocado: https://wuelnerdotexe.github.io/enfocado/`
     );
+    sendSocket({
+      data: `Gracias @wuelnerdotexe por su tema de vscode @altaskur np esta ciego`,
+      audio: "alert.wav",
+    });
   });
 
   commands.addCommands("!sae", (client, target, ctx, message, self) => {
     client.say(
       target,
-      `/me Mirar el trabajo de esta pedazo de artista: https://twitter.com/Saeyeea`
+      `/me Mirar el trabajo de esta pedazo de artista: https://twitter.com/Saeyeea, https://www.instagram.com/saeyeea/ , https://www.twitch.tv/saeyeea`
+    );
+  });
+
+  commands.addCommands("!burncss", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me ${ctx.username} ha quemado css en directo! y se ha quedado sin pelo `
+    );
+    sendSocket({
+      data: `@altaskur deja CSS para @manzdev`,
+      audio: "alert.wav",
+    });
+  });
+
+  commands.addCommands("!burnjava", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me 3 Millones de dispositivos ejecutan java, y @${ctx.username} ha quemado java en directo! `
+    );
+  });
+
+  commands.addCommands("!burnvim", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me ${ctx.username} ha quemado vim en directo! 9/10 sysadmins entraron en pánico `
+    );
+    sendSocket({
+      data: `${ctx.username} 🔥🔥 VIM 🔥🔥`,
+      audio: "alert.wav",
+    });
+  });
+
+  commands.addCommands("!web", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me 💻 Puedes ir a la web del canal https://altaskur.github.io/ ⚠️ en construcción ⚠️`
+    );
+    sendSocket({
+      data: `a ver si @altaskur termina la web de una vez`,
+      audio: "alert.wav",
+    });
+  });
+
+  commands.addCommands("!wiki", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me 💻 Puedes ir a la wiki del canal https://github.com/altaskur/Apuntes/wiki`
+    );
+  });
+
+  commands.addCommands("!luisllamas", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me 💻 Visita el blog de @LuisLlamas_es https://luisllamas.es/ y su directo https://www.twitch.tv/luisllamas_es `
+    );
+    sendSocket({
+      data: `MQTT send to @LuisLlamas_es`,
+      audio: "alert.wav",
+    });
+  });
+
+  commands.addCommands("!danirod", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me 💻  Visita su directo https://www.twitch.tv/danirod y los video tutoriales de su canal https://www.youtube.com/c/makigas`
+    );
+  });
+
+  commands.addCommands("!comandos", (client, target, ctx, message, self) => {
+    client.say(
+      "altaskur",
+      `/me Lista de comandos: !redes !gintonic !report !404 !problemas !bot !tema !sae !burnCss !burnJava !burnVim !web !wiki`
     );
   });
 }

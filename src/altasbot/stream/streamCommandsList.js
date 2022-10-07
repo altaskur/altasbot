@@ -7,10 +7,6 @@ function sendSocket(data) {
 }
 
 function streamCommandsList(commands) {
-  commands.addCommands("!stream", (client, target, ctx, message, self) => {
-    client.say(target, `/me MrDestructoid Hola ${ctx.username}!`);
-  });
-
   commands.addCommands("!emotesOn", (client, target, ctx, message, self) => {
     this.client
       .emoteonly(process.env.CHANNEL_NAME)

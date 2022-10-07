@@ -4,7 +4,6 @@
   "description": "Un bot pensado para practicar backend, consumiendo APIs, echo en programación orientada a objetos",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index.js",
     "dev": "nodemon ./index.js",
     "sse": "node ./src/sse/main.js",

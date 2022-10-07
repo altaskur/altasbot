@@ -8,7 +8,7 @@ class Commands {
     this.client.on("chat", (target, ctx, message, self) => {
       if (self) return;
       const commandName = message.toLowerCase();
-
+      console.log(commandName);
       if (commandName.startsWith("!") && this.dict[commandName]) {
         this.dict[commandName](this.client, target, ctx, message, self);
         console.log(`* Executed ${commandName} command`);
