@@ -1,0 +1,13 @@
+{
+    "messages": [
+        {
+            "command": "!test",
+            "message": "/me Bip Bop 010101 test!",
+            "haveToSendText": false,
+            "haveToSendSocket": true,
+            "haveToSendAudio": true,
+            "socketMessage": "Bip Bop 010101 test",
+            "audio": "alert.wav"
+        }
+    ]
+}

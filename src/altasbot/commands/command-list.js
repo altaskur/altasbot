@@ -1,22 +1,24 @@
 var reports = 0;
 const socketInit = require("../../socketServer/socketInit.js");
+const commandList = require("./comand-list.json");
 
 function sendSocket(data) {
   const connection = socketInit.getConnection();
   connection.sendEvent("message", data);
 }
 
+function executeCommand(commands) {
+  console.log("TEST:", commandList.messages);
+}
+
 function commanList(commands) {
+  executeCommand();
   commands.addCommands("!hola", (client, target, ctx, message, self) => {
     client.say(target, `/me MrDestructoid Hola ${ctx.username}!`);
     sendSocket({
       data: `Hola ${ctx.username}!`,
       audio: "alert.wav",
     });
-  });
-
-  commands.addCommands("!adios", (client, target, ctx, message, self) => {
-    client.say(target, `/me MrDestructoid adios ${ctx.username}!`);
   });
 
   commands.addCommands("!test", (client, target, ctx, message, self) => {
@@ -157,6 +159,17 @@ function commanList(commands) {
     });
   });
 
+  commands.addCommands("!burnpython", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me ${ctx.username} ha quemado python en directo! Lua ha entrado en una nueva era dorada `
+    );
+    sendSocket({
+      data: `${ctx.username} 🔥🔥 PYTHON 🔥🔥 LUA ❤ 🎉`,
+      audio: "alert.wav",
+    });
+  });
+
   commands.addCommands("!web", (client, target, ctx, message, self) => {
     client.say(
       target,
@@ -171,7 +184,7 @@ function commanList(commands) {
   commands.addCommands("!wiki", (client, target, ctx, message, self) => {
     client.say(
       target,
-      `/me 💻 Puedes ir a la wiki del canal https://github.com/altaskur/Apuntes/wiki`
+      `/me 💻 Puedes ir a la wiki del canal https://github.com/altaskur/Apuntes`
     );
   });
 
@@ -189,14 +202,19 @@ function commanList(commands) {
   commands.addCommands("!danirod", (client, target, ctx, message, self) => {
     client.say(
       target,
-      `/me 💻  Visita su directo https://www.twitch.tv/danirod y los video tutoriales de su canal https://www.youtube.com/c/makigas`
+      `/me 💻  Visita su directo https://www.twitch.tv/danirod_ y los video tutoriales de su canal https://www.youtube.com/c/makigas`
     );
   });
-
+  commands.addCommands("!manz", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me 💻  Visita su directo https://www.twitch.tv/manzdev a su web https://manz.dev/ y su canal de youtube https://www.youtube.com/c/ManzDev`
+    );
+  });
   commands.addCommands("!comandos", (client, target, ctx, message, self) => {
     client.say(
       "altaskur",
-      `/me Lista de comandos: !redes !gintonic !report !404 !problemas !bot !tema !sae !burnCss !burnJava !burnVim !web !wiki`
+      `/me Lista de comandos: !burncss, !burnjava, !burnvim, !burnpython, !web, !wiki, !luisllamas, !danirod, !manz, !tema, !bot, !problemas, !error, !sae, !comandos`
     );
   });
 }

@@ -14,6 +14,16 @@ class Stream {
           this.dict[commandName](this.client, target, ctx, message, self);
           console.log(`* Executed ${commandName} command`);
         }
+
+        if (commandName.startsWith("!promo")) {
+          let test = message.split(" ")[1].split("@")[1];
+          console.log("El mensaje es", test);
+
+          this.client.say(
+            target,
+            `/me ${ctx.username} te recomienda este streamer: https://www.twitch.tv/${test}`
+          );
+        }
       }
     });
   }

@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 
 const http = require("http");
 const cors = require("cors");
@@ -47,7 +48,12 @@ class ServerExpress {
     this.routes();
 
     this.server.listen(this.port, () => {
-      console.log("Example app listening on port", this.port);
+      console.log(
+        "Altasbot running in port form channel",
+        process.env.CHANNEL_NAME,
+        " ",
+        this.port
+      );
     });
   }
 }
