@@ -3,11 +3,19 @@
         {
             "command": "!test",
             "message": "/me Bip Bop 010101 test!",
-            "haveToSendText": false,
+            "options": {
+                "permission": "everyone",
+                "cooldown": 0,
+                "cooldown_message": "You can only use this command every 0 seconds.",
+                "enabled": true
+            },
+            "haveToSendText": true,
             "haveToSendSocket": true,
             "haveToSendAudio": true,
-            "socketMessage": "Bip Bop 010101 test",
-            "audio": "alert.wav"
+            "socket": {
+                "message": "Bip Bop 010101 test",
+                "audio": "alert.wav"
+            }
         }
     ]
 }
