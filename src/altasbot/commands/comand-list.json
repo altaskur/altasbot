@@ -16,6 +16,118 @@
                 "message": "Bip Bop 010101 test",
                 "audio": "alert.wav"
             }
+        },
+        {
+            "command": "!discord",
+            "message": "/me Discord: https://discord.gg/4aNWsdCfpd",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false,
+            "socket": {
+                "message": "",
+                "audio": ""
+            }
+        },
+        {
+            "command": "!twitter",
+            "message": "`/me Twitter: https://twitter.com/altaskur",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!github",
+            "message": "/me GitHub: https://github.com/altaskur/altaskur",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!redes",
+            "message": "/me Twitter: https://twitter.com/altaskur GitHub: https://github.com/altaskur/altaskur Discord: https://discord.gg/4aNWsdCfpd ",
+            "haveToSendAudio": false,
+            "haveToSendSocket": false,
+            "haveToSendText": true
+        },
+        {
+            "command": "!tema",
+            "message": "/me El tema de vscode es Enfocado: https://wuelnerdotexe.github.io/enfocado/",
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "haveToSendAudio": true,
+            "socket": {
+                "message": "Enfocado by @wuelnerdotexe ",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!web",
+            "message": "/me ItsBoshyTime Web en desarrollo https://altaskur.github.io/  ItsBoshyTime ",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!gintonic",
+            "message": "",
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "haveToSendAudio": false,
+            "socket": {
+                "message": "",
+                "audio": "gintonic.mp3"
+            }
+        },
+        {
+            "command": "!sae",
+            "message": "/me Mirar el trabajo de esta pedazo de artista: https://twitter.com/Saeyeea, https://www.instagram.com/saeyeea/ , https://www.twitch.tv/saeyeea",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!luisllamas",
+            "message": "/me 💻 Visita el blog de @LuisLlamas_es https://luisllamas.es/ y su directo https://www.twitch.tv/luisllamas_es",
+            "haveToSendAudio": true,
+            "haveToSendSocket": true,
+            "haveToSendText": true,
+            "socket": {
+                "message": "QTT send to @LuisLlamas_es",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!manz",
+            "message": "/me 💻  Visita su directo https://www.twitch.tv/manzdev a su web https://manz.dev/ y su canal de Youtube https://www.youtube.com/c/ManzDev",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": "@manzdev 🥑🥑 NICE",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!danirod",
+            "message": "/me 💻 Visita su directo https://www.twitch.tv/danirod y su canal de Youtube https://www.youtube.com/c/makigas",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": "@danirod Kernel message usa fedora & gnome",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!burnpython",
+            "message": "/me Se ha liberado a la humanidad de la maldición de 🐍 Python, Lua y C# dan gracias '' por su sacrificio",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": " 🔥🔥 🐍Python, han sido quemados 🔥",
+                "audio": "alert.wav"
+            }
         }
     ]
 }

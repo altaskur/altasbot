@@ -8,7 +8,7 @@ function sendSocket(data) {
 }
 
 function executeCommand(commands) {
-  console.log("TEST:", commandList.messages);
+  
 }
 
 function commanList(commands) {

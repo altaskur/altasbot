@@ -39,13 +39,39 @@ class Commands {
       );
 
       if (haveCommand) {
-        
-        haveCommand.haveToSendText && this.sendChatMessage({ message: haveCommand.message }, target);
+        console.log("haveCommand", haveCommand);
+        if(haveCommand.command == "!gintonic"){
+          let totalGintonics = Math.floor(Math.random() * 101);
+          let gintonicMessage = `/me @altaskur le debe ${totalGintonics} gintonics a @bypepe77  con un valor total de ${totalGintonics * 8} €`
+          this.sendChatMessage({
+            message: gintonicMessage
+          }, target);
 
-        haveCommand.haveToSendSocket && this.sendSocketMessage({
-          data:  haveCommand.socket.message,
-          audio: haveCommand.haveToSendAudio ? haveCommand.socket.audio: null,
-          });
+          haveCommand.haveToSendSocket = true;
+          haveCommand.socket.message = `🍸 ${totalGintonics} gintonics a @bypepe77`;
+  
+         if(ctx.username == "bypepe77"){
+          haveCommand.socket.audio = "gintonic.mp3";
+         }
+        }
+
+       // haveCommand.haveToSendText && this.sendChatMessage({ message: haveCommand.message }, target);
+        if(haveCommand.haveToSendText){
+          this.sendChatMessage({ message: haveCommand.message }, target);
+        }
+        // haveCommand.haveToSendSocket && this.sendSocketMessage({
+        //   data:  haveCommand.socket.message,
+        //   audio: haveCommand.haveToSendAudio ? haveCommand.socket.audio: null,
+        //   });
+
+        
+
+        if(haveCommand.haveToSendSocket){
+          this.sendSocketMessage({
+            data:  haveCommand.socket.message,
+            audio: haveCommand.haveToSendAudio ? haveCommand.socket.audio: null,
+            });
+        }
       }
     });
   }
