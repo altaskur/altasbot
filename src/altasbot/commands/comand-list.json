@@ -109,7 +109,7 @@
         },
         {
             "command": "!danirod",
-            "message": "/me 💻 Visita su directo https://www.twitch.tv/danirod y su canal de Youtube https://www.youtube.com/c/makigas",
+            "message": "/me 💻 Visita su directo https://www.twitch.tv/danirod_ y su canal de Youtube https://www.youtube.com/c/makigas",
             "haveToSendAudio": true,
             "haveToSendText": true,
             "haveToSendSocket": true,

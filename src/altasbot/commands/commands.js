@@ -39,7 +39,7 @@ class Commands {
       );
 
       if (haveCommand) {
-        console.log("haveCommand", haveCommand);
+
         if(haveCommand.command == "!gintonic"){
           let totalGintonics = Math.floor(Math.random() * 101);
           let gintonicMessage = `/me @altaskur le debe ${totalGintonics} gintonics a @bypepe77  con un valor total de ${totalGintonics * 8} €`
