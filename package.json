@@ -4,9 +4,10 @@
   "description": "Un bot pensado para practicar backend, consumiendo APIs, echo en programación orientada a objetos",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index.js",
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "sse": "node ./src/sse/main.js",
+    "sse-dev": "nodemon ./src/sse/mainPOO.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +26,12 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.2",
-    "i": "^0.3.7",
+    "express": "^4.18.1",
     "npm": "^8.19.1",
+    "socket.io": "^4.5.2",
+    "tmi": "^2.0.0",
     "tmi.js": "^1.8.5"
   }
 }

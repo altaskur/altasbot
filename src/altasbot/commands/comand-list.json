@@ -1,0 +1,226 @@
+{
+    "messages": [
+        {
+            "command": "!test",
+            "message": "/me Bip Bop 010101 test!",
+            "options": {
+                "permission": "everyone",
+                "cooldown": 0,
+                "cooldown_message": "You can only use this command every 0 seconds.",
+                "enabled": true
+            },
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "haveToSendAudio": true,
+            "socket": {
+                "message": "Bip Bop 010101 test",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!discord",
+            "message": "/me Discord: https://discord.gg/4aNWsdCfpd",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false,
+            "socket": {
+                "message": "",
+                "audio": ""
+            }
+        },
+        {
+            "command": "!twitter",
+            "message": "/me Twitter: https://twitter.com/altaskur",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!github",
+            "message": "/me GitHub: https://github.com/altaskur/altaskur",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!redes",
+            "message": "/me Twitter: https://twitter.com/altaskur GitHub: https://github.com/altaskur/altaskur Discord: https://discord.gg/4aNWsdCfpd ",
+            "haveToSendAudio": false,
+            "haveToSendSocket": false,
+            "haveToSendText": true
+        },
+        {
+            "command": "!tema",
+            "message": "/me El tema de vscode es Enfocado: https://wuelnerdotexe.github.io/enfocado/",
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "haveToSendAudio": true,
+            "socket": {
+                "message": "Enfocado by @wuelnerdotexe ",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!web",
+            "message": "/me ItsBoshyTime Web en desarrollo https://altaskur.github.io/  ItsBoshyTime ",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!apuntes",
+            "message": "/me https://github.com/altaskur/Apuntes <<-- los apuntes del canal",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!dotfiles",
+            "message": "/me https://github.com/altaskur/altaskur/tree/main/dotfiles",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!gintonic",
+            "message": "",
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "haveToSendAudio": false,
+            "socket": {
+                "message": "",
+                "audio": "gintonic.mp3"
+            }
+        },
+        {
+            "command": "!sae",
+            "message": "/me Mirar el trabajo de esta pedazo de artista: https://twitter.com/Saeyeea, https://www.instagram.com/saeyeea/ , https://www.twitch.tv/saeyeea",
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "haveToSendAudio": false
+        },
+        {
+            "command": "!luisllamas",
+            "message": "/me 💻 Visita el blog de @LuisLlamas_es https://luisllamas.es/ y su directo https://www.twitch.tv/luisllamas_es",
+            "haveToSendAudio": true,
+            "haveToSendSocket": true,
+            "haveToSendText": true,
+            "socket": {
+                "message": "QTT send to @LuisLlamas_es",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!manz",
+            "message": "/me 💻  Visita su directo https://www.twitch.tv/manzdev a su web https://manz.dev/ y su canal de Youtube https://www.youtube.com/c/ManzDev",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": "@manzdev 🥑🥑 NICE",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!danirod",
+            "message": "/me 💻 Visita su directo https://www.twitch.tv/danirod_ y su canal de Youtube https://www.youtube.com/c/makigas",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": "@danirod Kernel message usa fedora & gnome",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!pato",
+            "message": "/me 🦆  🦆 Visita su pato-directo https://www.twitch.tv/niv3k_el_pato  🦆  🦆",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": " 🦆 Duck message 🦆",
+                "audio": "quack.wav"
+            }
+        },
+        {
+            "command": "!burnpython",
+            "message": "/me Se ha liberado a la humanidad de la maldición de 🐍 Python, Lua y C# dan gracias '' por su sacrificio",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": " 🔥🔥 🐍Python, han sido quemados 🔥",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!burncss",
+            "message": "/me @altaskur deja CSS para @manzdev",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": " 🔥🔥 @altaskur deja CSS para @manzdev 🔥",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!burnvim",
+            "message": "/me se ha quemado vim en directo! 9/10 sysadmins entraron en pánico",
+            "haveToSendAudio": true,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": " 🔥🔥 VIM 🔥🔥",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!solid",
+            "message": "/me Los 5 principios SOLID de diseño de aplicaciones de software son:     S – Principio de responsabilidad única (SRP)        O – Abierto a extensión, cerrado a modificación (OCP)     L – Principio de sustitución de Liskov      I – Principio de segregación de interface (ISP)      D –  Principio de inversión de dependencias (DIP)",
+            "haveToSendAudio": false,
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "socket": {
+                "message": " 🔥🔥 VIM 🔥🔥",
+                "audio": "alert.wav"
+            }
+        },
+        {
+            "command": "!tanukihelp",
+            "message": "/me las instrucciones de tanuki son: !comer !beso !besito y no le gusta: python, psql",
+            "haveToSendAudio": false,
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "socket": {
+                "message": " ",
+                "audio": ""
+            }
+        },
+        {
+            "command": "!comandos",
+            "message": "/me !tema !web !apuntes !dotfiles !solid !burnvim !burnCss !burnpython !gintonic",
+            "haveToSendAudio": false,
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "socket": {
+                "message": " ",
+                "audio": ""
+            }
+        }
+        ,
+        {
+            "command": "!nalgada",
+            "message": "/me recibiste una nalgada de @hellsing2030",
+            "haveToSendAudio": false,
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "socket": {
+                "message": "!nalgada de @hellsing2030",
+                "audio": ""
+            }
+        }
+    ]
+}
+

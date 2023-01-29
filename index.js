@@ -1,4 +1,4 @@
-const { AltasBot } = require("./src/main.js");
+const { ServerExpress } = require("./src/socketServer/main.js");
 
-const bot = new AltasBot();
-bot.execute();
+const socket = new ServerExpress();
+socket.start();

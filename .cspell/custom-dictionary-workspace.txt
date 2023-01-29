@@ -4,6 +4,7 @@ Altasbot
 altaskur
 autohost
 baneado
+Banear
 bypepe
 comman
 desafio
@@ -15,9 +16,18 @@ followersonlyoff
 gintonic
 gintonics
 hosteado
+middlewares
+misscapricornio
+nightbot
 resub
 Roadmap
 roomstate
+saeyea
 slowoff
+soundalerts
+streamelements
+streamlabs
+stremer
 subscribersoff
+truetype
 userstate
