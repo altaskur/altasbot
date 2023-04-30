@@ -122,7 +122,16 @@ function commanList(commands) {
       audio: "alert.wav",
     });
   });
-
+  commands.addCommands("!donWeb", (client, target, ctx, message, self) => {
+    client.say(
+      target,
+      `/me El tema de vscode es Enfocado: https://wuelnerdotexe.github.io/enfocado/`
+    );
+    sendSocket({
+      data: `Gracias @wuelnerdotexe por su tema de vscode @altaskur np esta ciego`,
+      audio: "alert.wav",
+    });
+  });
   commands.addCommands("!sae", (client, target, ctx, message, self) => {
     client.say(
       target,

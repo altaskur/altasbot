@@ -82,6 +82,17 @@
             "haveToSendAudio": false
         },
         {
+            "command": "!donweb",
+            "message": "/me https://donweb.com/hosting-cloud-servers-vps?utm_source=altaskur-twitch&utm_campaign=embajadores-de-marca&utm_medium=text-link&utm_content=stream-twitch",
+            "haveToSendText": true,
+            "haveToSendSocket": true,
+            "haveToSendAudio": false,
+            "socket": {
+                "message": "Somos Embajador de Donweb echarle un ojo a sus servicios",
+                "audio": "alert.wav"
+            }
+        },
+        {
             "command": "!gintonic",
             "message": "",
             "haveToSendText": true,
@@ -89,7 +100,7 @@
             "haveToSendAudio": false,
             "socket": {
                 "message": "",
-                "audio": "gintonic.mp3"
+                "audio": ""
             }
         },
         {
@@ -189,7 +200,7 @@
         },
         {
             "command": "!tanukihelp",
-            "message": "/me las instrucciones de tanuki son: !comer !beso !besito y no le gusta: python, psql",
+            "message": "/me las instrucciones de tanuki son: !comer !beso !besito y no le gusta: psql",
             "haveToSendAudio": false,
             "haveToSendText": true,
             "haveToSendSocket": false,

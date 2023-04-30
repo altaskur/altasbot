@@ -49,24 +49,22 @@ class Commands {
 
           haveCommand.haveToSendSocket = true;
           haveCommand.socket.message = `🍸 ${totalGintonics} gintonics a @bypepe77`;
-  
-         if(ctx.username == "bypepe77"){
-          haveCommand.socket.audio = "gintonic.mp3";
-         }
+          console.log(haveCommand)
+          if(ctx.username == "bypepe77"){
+            console.log("Efectivamente lo ha lanzado byppepe")
+            haveCommand.haveToSendAudio = true;
+            haveCommand.socket.audio = "gintonic.mp3";
+          }
+            // si quieres resetear el audio completa con un else
         }
 
-       // haveCommand.haveToSendText && this.sendChatMessage({ message: haveCommand.message }, target);
+
         if(haveCommand.haveToSendText){
           this.sendChatMessage({ message: haveCommand.message }, target);
         }
-        // haveCommand.haveToSendSocket && this.sendSocketMessage({
-        //   data:  haveCommand.socket.message,
-        //   audio: haveCommand.haveToSendAudio ? haveCommand.socket.audio: null,
-        //   });
-
-        
 
         if(haveCommand.haveToSendSocket){
+
           this.sendSocketMessage({
             data:  haveCommand.socket.message,
             audio: haveCommand.haveToSendAudio ? haveCommand.socket.audio: null,
