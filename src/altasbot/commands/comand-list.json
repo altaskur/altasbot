@@ -151,7 +151,18 @@
             "haveToSendSocket": true,
             "socket": {
                 "message": " 🦆 Duck message 🦆",
-                "audio": "quack.wav"
+                "audio": "quack-1.wav"
+            }
+        },
+        {
+            "command": "!david",
+            "message": "/me 💻  Visita su directo https://www.twitch.tv/cursosDeDesarrollo a su web https://cursosdedesarrollo.com/ y su canal de Youtube https://www.youtube.com/@CursosdeDesarrollo",
+            "haveToSendAudio": false,
+            "haveToSendText": true,
+            "haveToSendSocket": false,
+            "socket": {
+                "message": " 🦆 Duck message 🦆",
+                "audio": ""
             }
         },
         {
