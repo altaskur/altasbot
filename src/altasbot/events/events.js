@@ -87,7 +87,7 @@ class Events {
       console.log(username + " ha sido baneado del canal por " + reason);
       this.client.action(
         process.env.CHANNEL_NAME,
-        `MrDestructoid ${username} ha sido baneado del canal por ${reason}`
+        `MrDestructoid ${username} ha sido baneado del canal ${reason ? `por ${reason}` :"por NULL //ocultar Null"}`
       );
     });
 
